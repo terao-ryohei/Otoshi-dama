@@ -36,29 +36,4 @@ const style = css`
     font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic,
       '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
   }
-  select {
-    background-color: #eff6e4;
-    display: block;
-    font-size: 16px;
-    padding: 0 40px 0 16px;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    height: 36px;
-    cursor: pointer;
-  }
-  &:after {
-    display: block;
-    content: '';
-    position: absolute;
-    right: 16px;
-    top: 68%;
-    transform: translateY(-4px);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 12px 7px 0 7px;
-    border-color: ${COLORS.green} transparent transparent transparent;
-    pointer-events: none;
-  }
 `;

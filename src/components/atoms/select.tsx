@@ -33,10 +33,36 @@ const style = css`
   margin: 20px 0;
   padding: 5px 0 0 0;
   background-color: ${COLORS.white};
+  position: relative;
   ${min('sp')} {
     margin: 10px 10px 20px 10px;
     padding: 10px 10px 20px 10px;
     border-radius: 10px;
+  }
+  select {
+    background-color: #eff6e4;
+    display: block;
+    font-size: 16px;
+    padding: 0 40px 0 16px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 36px;
+    cursor: pointer;
+  }
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 74%;
+    transform: translateY(-4px);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 7px 0 7px;
+    border-color: ${COLORS.green} transparent transparent transparent;
+    pointer-events: none;
   }
   .text {
     font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic,
