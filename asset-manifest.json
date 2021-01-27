@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Otoshi-dama/static/css/main.8b4234a4.chunk.css",
+    "main.js": "/Otoshi-dama/static/js/main.4e677329.chunk.js",
+    "main.js.map": "/Otoshi-dama/static/js/main.4e677329.chunk.js.map",
+    "runtime-main.js": "/Otoshi-dama/static/js/runtime-main.f6f92b56.js",
+    "runtime-main.js.map": "/Otoshi-dama/static/js/runtime-main.f6f92b56.js.map",
+    "static/js/2.2bfd83af.chunk.js": "/Otoshi-dama/static/js/2.2bfd83af.chunk.js",
+    "static/js/2.2bfd83af.chunk.js.map": "/Otoshi-dama/static/js/2.2bfd83af.chunk.js.map",
+    "static/js/3.a61406d7.chunk.js": "/Otoshi-dama/static/js/3.a61406d7.chunk.js",
+    "static/js/3.a61406d7.chunk.js.map": "/Otoshi-dama/static/js/3.a61406d7.chunk.js.map",
+    "index.html": "/Otoshi-dama/index.html",
+    "static/css/main.8b4234a4.chunk.css.map": "/Otoshi-dama/static/css/main.8b4234a4.chunk.css.map",
+    "static/js/2.2bfd83af.chunk.js.LICENSE.txt": "/Otoshi-dama/static/js/2.2bfd83af.chunk.js.LICENSE.txt",
+    "static/media/grandpa.fedf911b.jpg": "/Otoshi-dama/static/media/grandpa.fedf911b.jpg",
+    "static/media/otoshi-dama.6179d8fe.png": "/Otoshi-dama/static/media/otoshi-dama.6179d8fe.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f6f92b56.js",
+    "static/js/2.2bfd83af.chunk.js",
+    "static/css/main.8b4234a4.chunk.css",
+    "static/js/main.4e677329.chunk.js"
+  ]
+}
