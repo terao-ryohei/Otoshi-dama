@@ -33,11 +33,6 @@ const style = css`
     padding: 10px 10px 20px 10px;
     border-radius: 10px;
   }
-  p {
-    display: block;
-    margin-top: 10px;
-    font-size: 18px;
-  }
   ul {
     li {
       padding: 10px;

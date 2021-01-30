@@ -84,6 +84,12 @@ dd {
   word-wrap: break-word;
 }
 
+p {
+  font-size: 18px;
+  display: block;
+  margin-top: 10px;
+}
+
 br {
   &.sp-show {
     display: none;

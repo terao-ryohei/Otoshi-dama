@@ -33,18 +33,16 @@ export default Footer;
 const style = css`
   background-color: ${COLORS.green};
   margin-top: 64px;
+  text-align: center;
+  color: ${COLORS.white};
+  padding: 23px 0;
   ${max('sp')} {
     display: none;
   }
-  .text {
-    color: ${COLORS.white};
-    text-align: center;
-    padding: 23px 0;
-  }
   ${max('pc', 'tab')} {
-    margin-bottom: 66px;
+    padding-bottom: 66px;
   }
   ${max('tab')} {
-    margin-bottom: 41px;
+    padding-bottom: 41px;
   }
 `;

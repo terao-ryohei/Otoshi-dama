@@ -47,11 +47,6 @@ const style = css`
   }
   .form {
     margin: 20px 0;
-    p {
-      display: block;
-      margin-top: 10px;
-      font-size: 18px;
-    }
     input {
       border: solid 1px ${COLORS.gray};
     }

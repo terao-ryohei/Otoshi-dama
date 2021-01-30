@@ -32,7 +32,7 @@ export function Home(): React.ReactElement {
         <p>
           <span className="red">{HOME_CONTRACT_LIMIT}</span>
           {HOME_CONTRACT_TEXT[0]}
-          <span className="red-border">{HOME_CONTRACT_COMPLETE}</span>
+          <span className="red border">{HOME_CONTRACT_COMPLETE}</span>
           {HOME_CONTRACT_TEXT[1]}
         </p>
         <Button text={HOME_BUTTON} className="yellow" />
@@ -59,7 +59,6 @@ const style = css`
     p {
       display: block;
       margin-top: 10px;
-      font-size: 18px;
     }
   }
   .contract {
@@ -72,22 +71,14 @@ const style = css`
       border-radius: 10px;
       padding: 5px;
     }
-    p {
-      display: block;
-      margin-top: 10px;
-      font-size: 18px;
-      .red {
-        color: ${COLORS.red};
-        font-size: 20px;
-        font-weight: bold;
-      }
-      .red-border {
-        color: ${COLORS.red};
-        border-bottom: solid 3px ${COLORS.red};
-        padding-bottom: 2px;
-        font-size: 20px;
-        font-weight: bold;
-      }
+    .red {
+      color: ${COLORS.red};
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .border {
+      border-bottom: solid 3px ${COLORS.red};
+      padding-bottom: 2px;
     }
   }
   .Button {

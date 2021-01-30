@@ -32,8 +32,8 @@ const style = css`
     border-radius: 50px;
     padding: 20px 80px;
     margin-bottom: 20px;
-    font-size: 18px;
     font-weight: bold;
+    font-size: 20px;
     &.yellow {
       background-color: ${COLORS.yellow};
       color: ${COLORS.black};

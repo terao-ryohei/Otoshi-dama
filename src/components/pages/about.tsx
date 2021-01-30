@@ -35,11 +35,6 @@ export function About(): React.ReactElement {
 
 const style = css`
   width: 100%;
-  p {
-    display: block;
-    margin-top: 10px;
-    font-size: 18px;
-  }
   .head {
     margin-bottom: 20px;
   }

@@ -64,11 +64,6 @@ const style = css`
     border-color: ${COLORS.green} transparent transparent transparent;
     pointer-events: none;
   }
-  p {
-    display: block;
-    margin-top: 10px;
-    font-size: 18px;
-  }
   ul {
     li {
       padding: 10px;
