@@ -1,6 +1,15 @@
 import { css } from '@emotion/react';
 import React from 'react';
 import Granpa from '../../assets/grandpa.jpg';
+import {
+  HOME_BUTTON,
+  HOME_CONTRACT_COMPLETE,
+  HOME_CONTRACT_LIMIT,
+  HOME_HEADER,
+  HOME_TEXT_1,
+  HOME_TEXT_2,
+  HOME_TEXT_3,
+} from '../../constants/home';
 import { COLORS, min } from '../../style';
 
 export function Home(): React.ReactElement {
@@ -11,36 +20,23 @@ export function Home(): React.ReactElement {
       </div>
       <div className="explain">
         <div className="colmun">
-          <h1 className="text">お年玉もリモートへ</h1>
-          <p className="text">
-            コロナ禍が騒がれる今、家族に会うのも一苦労...
-            <br />
-            そんな時代でも大切なお孫さんにイベントぐらいは楽しんでもらいたい
-            <br />
-            現金を郵送するのは味気ないけど、何を送ればいいのか分からない
-            <br />
-            そんなあなたの代わりに私たちが心を込めてお年玉をお届けします
-          </p>
+          <h1>{HOME_HEADER[0]}</h1>
+          <p>{HOME_TEXT_1}</p>
         </div>
         <div className="colmun">
-          <h1 className="text">選べる、選んでもらえるお年玉</h1>
-          <p className="text">
-            3種類のお年玉から選んでお送りすることができます
-            <br />
-            選んで送っていただくこともできますし、送ってからお孫さんや親御さんに選んでもらう事もできます
-            <br />
-            選んでもらう場合でもしっかり説明書きを同封するのでお孫さんのご家族に迷惑をかける事はありません
-          </p>
+          <h1>{HOME_HEADER[1]}</h1>
+          <p>{HOME_TEXT_2}</p>
         </div>
       </div>
       <div className="contract">
-        <h1 className="text">お年玉で想いを届けよう</h1>
-        <p className="text">
-          <span className="red">12/31 </span>までのお申し込みで
-          <span className="red-border"> 1/1 </span>
-          に届くように手配できます
+        <h1>{HOME_HEADER[2]}</h1>
+        <p>
+          <span className="red">{HOME_CONTRACT_LIMIT}</span>
+          {HOME_TEXT_3[0]}
+          <span className="red-border">{HOME_CONTRACT_COMPLETE}</span>
+          {HOME_TEXT_3[1]}
         </p>
-        <button type="button">お申し込みはコチラ</button>
+        <button type="button">{HOME_BUTTON}</button>
       </div>
     </div>
   );
@@ -50,10 +46,6 @@ const style = css`
   width: 100%;
   .banner {
     margin-bottom: 20px;
-  }
-  .text {
-    font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic,
-      '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
   }
   .colmun {
     margin: 10px 0 20px 0;

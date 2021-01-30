@@ -1,29 +1,33 @@
 import { css } from '@emotion/react';
 import React from 'react';
+import {
+  CONTACT_BUTTON,
+  CONTACT_HEADER,
+  CONTACT_TITLE,
+  CONTACT_WARN_TEXT,
+} from '../../constants/contact';
 import { COLORS } from '../../style';
 
 export function Contact(): React.ReactElement {
   return (
     <div css={style} className="Contact">
       <div className="head">
-        <h1 className="text">お問い合わせ</h1>
+        <h1>{CONTACT_TITLE}</h1>
       </div>
       <div className="form">
-        <p>お名前</p>
+        <p>{CONTACT_HEADER[0]}</p>
         <input type="text" />
       </div>
       <div className="form">
-        <p>お問い合わせ内容</p>
+        <p>{CONTACT_HEADER[1]}</p>
         <textarea />
       </div>
       <div className="warn">
-        <p>※対応時間は平日10:00~19:00となります</p>
-        <p>※返答にお時間をいただく場合がございます</p>
+        <p>{CONTACT_WARN_TEXT[0]}</p>
+        <p>{CONTACT_WARN_TEXT[1]}</p>
       </div>
       <div className="buttonWrap">
-        <button className="text" type="button">
-          申し込む
-        </button>
+        <button type="button">{CONTACT_BUTTON}</button>
       </div>
     </div>
   );
@@ -31,10 +35,6 @@ export function Contact(): React.ReactElement {
 
 const style = css`
   width: 100%;
-  .text {
-    font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic,
-      '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
-  }
   .warn {
     font-size: 16px;
     color: ${COLORS.gray};

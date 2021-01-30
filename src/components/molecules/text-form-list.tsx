@@ -11,7 +11,7 @@ export type TypeFormProps = {
 export function TextFormList(props: TypeFormProps): React.ReactElement {
   return (
     <div css={style} className="TextFormList">
-      <ul className="text">
+      <ul>
         <h2>{props.header}</h2>
         {props.text.map((value: string) => (
           <li key={value}>
@@ -32,10 +32,6 @@ const style = css`
     margin: 10px 10px 20px 10px;
     padding: 10px 10px 20px 10px;
     border-radius: 10px;
-  }
-  .text {
-    font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic,
-      '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
   }
   p {
     display: block;

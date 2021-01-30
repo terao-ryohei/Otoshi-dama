@@ -32,8 +32,4 @@ const style = css`
     padding: 10px 10px 20px 10px;
     border-radius: 10px;
   }
-  .text {
-    font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic,
-      '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
-  }
 `;

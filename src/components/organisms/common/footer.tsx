@@ -15,7 +15,7 @@ class Footer extends Component {
       <>
         {this.props.children}
         <div css={style} className="Footer">
-          <p className="text">
+          <p>
             <small>
               Copyright&copy; Ryohei Terao <br className="sp" />
             </small>

@@ -31,3 +31,5 @@ export const SERVICE_TYPE_VALUE: string[] = [
   'QUO（クオ）カード',
 ];
 export const SERVICE_PAY_VALUE: string[] = ['1,000円', '5,000円', '10,000円'];
+
+export const SERVICE_BUTTON = '申し込む';

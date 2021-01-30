@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import React from 'react';
 import {
+  SERVICE_BUTTON,
   SERVICE_CONTRACTOR_TEXT,
   SERVICE_HEADER,
   SERVICE_PAY_VALUE,
@@ -28,7 +29,7 @@ export function Serivce(): React.ReactElement {
   return (
     <div css={style} className="Serivce">
       <div className="head">
-        <h1 className="text">{SERVICE_TEXT}</h1>
+        <h1>{SERVICE_TEXT}</h1>
       </div>
       <TextFormList header={SERVICE_HEADER[0]} text={SERVICE_CONTRACTOR_TEXT} />
       <TextFormList header={SERVICE_HEADER[1]} text={SERVICE_RECEIVER_TEXT} />
@@ -50,9 +51,7 @@ export function Serivce(): React.ReactElement {
         />
       </div>
       <div className="buttonWrap">
-        <button className="text" type="button">
-          申し込む
-        </button>
+        <button type="button">{SERVICE_BUTTON}</button>
       </div>
     </div>
   );
@@ -60,10 +59,6 @@ export function Serivce(): React.ReactElement {
 
 const style = css`
   width: 100%;
-  .text {
-    font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic,
-      '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
-  }
   p {
     display: block;
     margin-top: 10px;
