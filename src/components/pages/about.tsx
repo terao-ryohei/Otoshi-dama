@@ -4,16 +4,10 @@ import {
   ABOUT_EXPLAIN,
   ABOUT_HEADER,
   ABOUT_LINK,
-  ABOUT_TEXT_1,
-  ABOUT_TEXT_2,
-  ABOUT_TEXT_3,
+  ABOUT_TEXT,
   ABOUT_TITLE,
 } from '../../constants/about';
-import {
-  AMAZON_CARD_URL,
-  BOOK_CARD_URL,
-  QUO_CARD_URL,
-} from '../../constants/url';
+import { PAY_EXPLAIN_URL } from '../../constants/url';
 import { COLORS, min } from '../../style';
 
 export function About(): React.ReactElement {
@@ -24,30 +18,16 @@ export function About(): React.ReactElement {
         <p>{ABOUT_EXPLAIN}</p>
       </div>
       <div className="explain">
-        <div className="colmun">
-          <h2>{ABOUT_HEADER[0]}</h2>
-          <p>{ABOUT_TEXT_1}</p>
-          <p className="link">
-            {ABOUT_LINK[0]}
-            <a href={AMAZON_CARD_URL}>{ABOUT_LINK[1]}</a>
-          </p>
-        </div>
-        <div className="colmun">
-          <h2>{ABOUT_HEADER[1]}</h2>
-          <p>{ABOUT_TEXT_2}</p>
-          <p className="link">
-            {ABOUT_LINK[0]}
-            <a href={BOOK_CARD_URL}>{ABOUT_LINK[1]}</a>
-          </p>
-        </div>
-        <div className="colmun">
-          <h2>{ABOUT_HEADER[2]}</h2>
-          <p>{ABOUT_TEXT_3}</p>
-          <p className="link">
-            {ABOUT_LINK[0]}
-            <a href={QUO_CARD_URL}>{ABOUT_LINK[1]}</a>
-          </p>
-        </div>
+        {ABOUT_HEADER.map((value: string, index: number) => (
+          <div key={value} className="colmun">
+            <h2>{value}</h2>
+            <p>{ABOUT_TEXT[index]}</p>
+            <p className="link">
+              {ABOUT_LINK[0]}
+              <a href={PAY_EXPLAIN_URL[index]}>{ABOUT_LINK[1]}</a>
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );

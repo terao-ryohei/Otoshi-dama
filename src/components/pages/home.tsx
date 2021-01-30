@@ -6,9 +6,9 @@ import {
   HOME_CONTRACT_COMPLETE,
   HOME_CONTRACT_LIMIT,
   HOME_HEADER,
-  HOME_TEXT_1,
-  HOME_TEXT_2,
-  HOME_TEXT_3,
+  HOME_TEXT,
+  HOME_CONTRACT_TEXT,
+  HOME_CONTRACT_HEADER,
 } from '../../constants/home';
 import { COLORS, min } from '../../style';
 import { Button } from '../atoms/button';
@@ -20,22 +20,20 @@ export function Home(): React.ReactElement {
         <img src={Granpa} alt="" />
       </div>
       <div className="explain">
-        <div className="colmun">
-          <h1>{HOME_HEADER[0]}</h1>
-          <p>{HOME_TEXT_1}</p>
-        </div>
-        <div className="colmun">
-          <h1>{HOME_HEADER[1]}</h1>
-          <p>{HOME_TEXT_2}</p>
-        </div>
+        {HOME_HEADER.map((value: string, index: number) => (
+          <div className="colmun">
+            <h1>{value}</h1>
+            <p>{HOME_TEXT[index]}</p>
+          </div>
+        ))}
       </div>
       <div className="contract">
-        <h1>{HOME_HEADER[2]}</h1>
+        <h1>{HOME_CONTRACT_HEADER}</h1>
         <p>
           <span className="red">{HOME_CONTRACT_LIMIT}</span>
-          {HOME_TEXT_3[0]}
+          {HOME_CONTRACT_TEXT[0]}
           <span className="red-border">{HOME_CONTRACT_COMPLETE}</span>
-          {HOME_TEXT_3[1]}
+          {HOME_CONTRACT_TEXT[1]}
         </p>
         <Button text={HOME_BUTTON} className="yellow" />
       </div>
