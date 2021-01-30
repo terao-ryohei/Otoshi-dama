@@ -26,10 +26,10 @@
   "homepage": "http://terao-ryohei.github.io/Otoshi-dama",
   "scripts": {
     "start": "react-app-rewired start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "react-scripts build && gh-pages -d build"
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
+    "deploy": "react-app-rewired build && gh-pages -d build"
   },
   "husky": {
     "hooks": {

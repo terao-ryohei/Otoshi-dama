@@ -11,7 +11,7 @@ import { Serivce } from './components/pages/service';
 function App(): React.ReactElement {
   return (
     <div css={style} className="main">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -31,5 +31,5 @@ const style = css`
   width: 100%;
   height: 100%;
   position: relative;
-  min-width: 350px;
+  min-width: 360px;
 `;
