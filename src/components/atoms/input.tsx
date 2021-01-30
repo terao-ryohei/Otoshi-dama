@@ -17,8 +17,4 @@ export function Input(props: InputProps): React.ReactElement {
 
 const style = css`
   width: 100%;
-  .text {
-    font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic,
-      '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
-  }
 `;

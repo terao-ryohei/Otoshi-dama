@@ -8,6 +8,7 @@ import Logo from '../../../assets/otoshi-dama.png';
 import { GlobalNav } from './g-nav';
 import { max, min } from '../../../style';
 import Footer from './footer';
+import { PAGES } from '../../../constants/pages';
 
 class Header extends Component {
   constructor(props: never) {
@@ -19,7 +20,7 @@ class Header extends Component {
       <>
         <div css={style} className="Header">
           <div className="logo">
-            <Link to="/">
+            <Link to={PAGES.HOME}>
               <img src={Logo} alt="" />
             </Link>
           </div>

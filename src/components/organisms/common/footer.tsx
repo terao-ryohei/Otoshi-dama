@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/no-useless-constructor */
 import { css } from '@emotion/react';
 import React, { Component } from 'react';
+import { FOOTER_TEXT } from '../../../constants/common';
 import { COLORS, max } from '../../../style';
 
 class Footer extends Component {
@@ -17,7 +18,8 @@ class Footer extends Component {
         <div css={style} className="Footer">
           <p>
             <small>
-              Copyright&copy; Ryohei Terao <br className="sp" />
+              {FOOTER_TEXT[0]}&copy;{FOOTER_TEXT[1]}
+              <br className="sp" />
             </small>
           </p>
         </div>

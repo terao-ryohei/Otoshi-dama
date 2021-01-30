@@ -11,6 +11,7 @@ import {
   HOME_TEXT_3,
 } from '../../constants/home';
 import { COLORS, min } from '../../style';
+import { Button } from '../atoms/button';
 
 export function Home(): React.ReactElement {
   return (
@@ -36,7 +37,7 @@ export function Home(): React.ReactElement {
           <span className="red-border">{HOME_CONTRACT_COMPLETE}</span>
           {HOME_TEXT_3[1]}
         </p>
-        <button type="button">{HOME_BUTTON}</button>
+        <Button text={HOME_BUTTON} className="yellow" />
       </div>
     </div>
   );
@@ -90,13 +91,8 @@ const style = css`
         font-weight: bold;
       }
     }
-    button {
-      margin-top: 15px;
-      background-color: ${COLORS.yellow};
-      border-radius: 10px;
-      padding: 5px;
-      font-size: 20px;
-      font-weight: bold;
-    }
+  }
+  .Button {
+    margin-top: 20px;
   }
 `;

@@ -10,7 +10,7 @@ import {
   SERVICE_TEXT,
   SERVICE_TYPE_VALUE,
 } from '../../constants/service';
-import { COLORS } from '../../style';
+import { Button } from '../atoms/button';
 import { SelectList } from '../molecules/select-list';
 import { TextFormList } from '../molecules/text-form-list';
 
@@ -51,7 +51,7 @@ export function Serivce(): React.ReactElement {
         />
       </div>
       <div className="buttonWrap">
-        <button type="button">{SERVICE_BUTTON}</button>
+        <Button text={SERVICE_BUTTON} />
       </div>
     </div>
   );
@@ -66,23 +66,5 @@ const style = css`
   }
   .head {
     margin-bottom: 20px;
-  }
-  .buttonWrap {
-    display: flex;
-    display: -webkit-flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    button {
-      text-align: center;
-      background-color: ${COLORS.green};
-      color: ${COLORS.white};
-      border-radius: 50px;
-      padding: 20px 80px;
-      margin-bottom: 20px;
-      font-size: 18px;
-      font-weight: bold;
-    }
   }
 `;

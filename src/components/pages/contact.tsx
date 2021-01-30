@@ -7,6 +7,9 @@ import {
   CONTACT_WARN_TEXT,
 } from '../../constants/contact';
 import { COLORS } from '../../style';
+import { Button } from '../atoms/button';
+import { Input } from '../atoms/input';
+import { TextArea } from '../atoms/text-area';
 
 export function Contact(): React.ReactElement {
   return (
@@ -15,19 +18,18 @@ export function Contact(): React.ReactElement {
         <h1>{CONTACT_TITLE}</h1>
       </div>
       <div className="form">
-        <p>{CONTACT_HEADER[0]}</p>
-        <input type="text" />
+        <Input header={CONTACT_HEADER[0]} />
       </div>
       <div className="form">
-        <p>{CONTACT_HEADER[1]}</p>
-        <textarea />
+        <TextArea header={CONTACT_HEADER[1]} />
       </div>
       <div className="warn">
-        <p>{CONTACT_WARN_TEXT[0]}</p>
-        <p>{CONTACT_WARN_TEXT[1]}</p>
+        {CONTACT_WARN_TEXT.map((value: string) => (
+          <p>{value}</p>
+        ))}
       </div>
       <div className="buttonWrap">
-        <button type="button">{CONTACT_BUTTON}</button>
+        <Button text={CONTACT_BUTTON} />
       </div>
     </div>
   );
@@ -43,24 +45,6 @@ const style = css`
   .head {
     margin-bottom: 20px;
   }
-  .buttonWrap {
-    display: flex;
-    display: -webkit-flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    button {
-      text-align: center;
-      background-color: ${COLORS.green};
-      color: ${COLORS.white};
-      border-radius: 50px;
-      padding: 20px 80px;
-      margin-bottom: 20px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-  }
   .form {
     margin: 20px 0;
     p {
@@ -73,15 +57,6 @@ const style = css`
     }
     textarea {
       border: solid 1px ${COLORS.gray};
-      background-color: #eff6e4;
-      display: block;
-      font-size: 16px;
-      padding: 0 40px 0 16px;
-      width: 100%;
-      max-width: 100%;
-      overflow-x: hidden;
-      min-height: 200px;
-      cursor: pointer;
     }
   }
 `;

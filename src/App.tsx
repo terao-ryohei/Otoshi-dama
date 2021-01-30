@@ -7,6 +7,7 @@ import { About } from './components/pages/about';
 import { Contact } from './components/pages/contact';
 import { Home } from './components/pages/home';
 import { Serivce } from './components/pages/service';
+import { PAGES } from './constants/pages';
 
 function App(): React.ReactElement {
   return (
@@ -14,10 +15,10 @@ function App(): React.ReactElement {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/service" component={Serivce} />
-            <Route exact path="/contact" component={Contact} />
+            <Route exact path={PAGES.HOME} component={Home} />
+            <Route exact path={PAGES.ABOUT} component={About} />
+            <Route exact path={PAGES.SERIVCE} component={Serivce} />
+            <Route exact path={PAGES.CONTACT} component={Contact} />
           </Switch>
         </Header>
       </BrowserRouter>

@@ -64,10 +64,6 @@ const style = css`
     border-color: ${COLORS.green} transparent transparent transparent;
     pointer-events: none;
   }
-  .text {
-    font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic,
-      '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
-  }
   p {
     display: block;
     margin-top: 10px;

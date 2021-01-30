@@ -7,6 +7,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import { SvgIcon } from '@material-ui/core';
 import { Link, useLocation } from 'react-router-dom';
 import { max, min, COLORS } from '../../../style';
+import { G_NAV } from '../../../constants/common';
+import { PAGES } from '../../../constants/pages';
 
 export function GlobalNav(): React.ReactElement {
   const location = useLocation();
@@ -19,33 +21,33 @@ export function GlobalNav(): React.ReactElement {
   return (
     <div css={style} className="GlobalNav">
       <ul className="navWrap">
-        <li className={`${select === '/' && 'select'}`}>
-          <Link to="/">
+        <li className={`${select === PAGES.HOME && 'select'}`}>
+          <Link to={PAGES.HOME}>
             <SvgIcon className="icon" component={HomeIcon} fontSize="large" />
-            <span>ホーム</span>
+            <span>{G_NAV[0]}</span>
           </Link>
         </li>
-        <li className={`${select === '/about' && 'select'}`}>
-          <Link to="/about">
+        <li className={`${select === PAGES.ABOUT && 'select'}`}>
+          <Link to={PAGES.ABOUT}>
             <SvgIcon className="icon" component={ChatIcon} fontSize="large" />
-            <span>サービス</span>
+            <span>{G_NAV[1]}</span>
           </Link>
         </li>
-        <li className={`${select === '/service' && 'select'}`}>
-          <Link to="/service">
+        <li className={`${select === PAGES.SERIVCE && 'select'}`}>
+          <Link to={PAGES.SERIVCE}>
             <SvgIcon
               className="icon"
               component={FavoriteIcon}
               fontSize="large"
             />
-            <span>お申し込み</span>
+            <span>{G_NAV[2]}</span>
           </Link>
         </li>
 
-        <li className={`${select === '/contact' && 'select'}`}>
-          <Link to="/contact">
+        <li className={`${select === PAGES.CONTACT && 'select'}`}>
+          <Link to={PAGES.CONTACT}>
             <SvgIcon className="icon" component={MailIcon} fontSize="large" />
-            <span>ご質問</span>
+            <span>{G_NAV[3]}</span>
           </Link>
         </li>
       </ul>
