@@ -1,23 +1,25 @@
 import { css } from '@emotion/react';
 import React from 'react';
 import { COLORS, min } from '../../style';
-import { Input } from '../atoms/input';
 
-export type TypeFormProps = {
-  header: string;
+export type TextViewProps = {
+  header: string[];
   text: string[];
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export function TextFormList(props: TypeFormProps): React.ReactElement {
+export function TextViewList(props: TextViewProps): React.ReactElement {
   return (
     <div css={style} className="TextFormList">
       <ul>
-        <h2>{props.header}</h2>
-        {props.text.map((value: string, index: number) => (
-          <li key={value}>
-            <Input id={index} header={value} onChange={props.onChange} />
-          </li>
+        {props.header.map((value: string, index: number) => (
+          <>
+            {props.text[index] !== '' && (
+              <li key={value}>
+                <h2>{value}</h2>
+                <p>{props.text[index]}</p>
+              </li>
+            )}
+          </>
         ))}
       </ul>
     </div>

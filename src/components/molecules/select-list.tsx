@@ -6,14 +6,15 @@ import { Select, SelectProps } from '../atoms/select';
 export type SelectListProps = {
   header: string;
   selectData: SelectProps[];
+  onChange: ((event: React.ChangeEvent<HTMLSelectElement>) => void)[];
 };
 
 export function SelectList(props: SelectListProps): React.ReactElement {
   return (
     <div css={style} className="SelectList">
       <h2>{props.header}</h2>
-      {props.selectData.map(value => (
-        <Select {...value} />
+      {props.selectData.map((value: SelectProps, index: number) => (
+        <Select {...value} onChange={props.onChange[index]} />
       ))}
     </div>
   );

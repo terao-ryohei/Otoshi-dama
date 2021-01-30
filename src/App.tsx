@@ -6,6 +6,8 @@ import Header from './components/organisms/common/header';
 import { About } from './components/pages/about';
 import { Contact } from './components/pages/contact';
 import { Home } from './components/pages/home';
+import { ServiceCheck } from './components/pages/service-check';
+import { ContactCheck } from './components/pages/contact-check';
 import { Serivce } from './components/pages/service';
 import { PAGES } from './constants/pages';
 
@@ -19,6 +21,8 @@ function App(): React.ReactElement {
             <Route exact path={PAGES.ABOUT} component={About} />
             <Route exact path={PAGES.SERIVCE} component={Serivce} />
             <Route exact path={PAGES.CONTACT} component={Contact} />
+            <Route exact path={PAGES.SERIVCE_VIEW} component={ServiceCheck} />
+            <Route exact path={PAGES.CONTACT_VIEW} component={ContactCheck} />
           </Switch>
         </Header>
       </BrowserRouter>

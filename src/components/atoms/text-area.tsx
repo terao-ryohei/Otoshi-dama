@@ -5,13 +5,14 @@ import { COLORS } from '../../style';
 export type TextAreaProps = {
   header: string;
   className?: string;
+  onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
 };
 
 export function TextArea(props: TextAreaProps): React.ReactElement {
   return (
     <div css={style} className={`TextArea ${props.className}`}>
       <p>{props.header}</p>
-      <textarea />
+      <textarea onChange={props.onChange} />
     </div>
   );
 }
@@ -23,7 +24,6 @@ const style = css`
     background-color: #eff6e4;
     display: block;
     font-size: 16px;
-    padding: 0 40px 0 16px;
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;

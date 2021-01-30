@@ -53,6 +53,7 @@
     "import/prefer-default-export": "off",
     "react/destructuring-assignment": "off",
     "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/ban-types": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

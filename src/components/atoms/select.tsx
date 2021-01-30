@@ -6,14 +6,14 @@ export type SelectProps = {
   header: string;
   option: string[];
   defaultChecked: number;
-  changeEvent?: () => void;
+  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 };
 
 export function Select(props: SelectProps): React.ReactElement {
   return (
     <div css={style} className="Select">
       <p>{props.header}</p>
-      <select onChange={props.changeEvent}>
+      <select onChange={props.onChange}>
         {props.option.map((value: string, index: number) => (
           <option
             key={value}

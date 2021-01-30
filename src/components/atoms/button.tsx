@@ -5,12 +5,17 @@ import { COLORS } from '../../style';
 export type InputProps = {
   text: string;
   className?: string;
+  onClick?: () => void;
 };
 
 export function Button(props: InputProps): React.ReactElement {
   return (
     <div css={style} className="Button">
-      <button className={`${props.className}`} type="button">
+      <button
+        className={`${props.className}`}
+        type="button"
+        onClick={props.onClick}
+      >
         {props.text}
       </button>
     </div>
